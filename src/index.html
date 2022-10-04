@@ -1,8 +1,27 @@
 <html>
-	<head>
-		<title>Phaser3 + Parceljs Template</title>
-	</head>
-	<body>
-		<script src="main.js"></script>
-	</body>
+    <head>
+        <title>Pong</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="main.ts"></script>
+    </head>
+    <body>
+        <div class="ctnPong">
+            <div id="logo"></div>
+            <div id="pongCanvas"></div>
+            <div class="placar">
+                <div class="ctnCount ctLeft">
+                    <input id="player2" class="form-control" type="text" value="0"/>
+                </div>
+                <div class="ctnVs"><h2>X</h2></div>
+                <div class="ctnCount ctRight">
+                    <input id="player1" class="form-control" type="text" value="0"/>
+                </div>
+            </div>
+            <div id="modal" class="ctnModal" style="display: none">
+                <img src="./assets/trophy.png" alt="trophy" />
+                <h3 id="winner" class="mgT">You win</h3>
+                <button id="bt_play" class="btn btn-main mgT">Play Again</button>
+            </div>
+        </div>
+    </body>
 </html>
