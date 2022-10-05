@@ -10,17 +10,24 @@
             <div id="pongCanvas"></div>
             <div class="placar">
                 <div class="ctnCount ctLeft">
-                    <input id="player2" class="form-control" type="text" value="0"/>
+                    <input id="player1" class="form-control" type="text" value="0"/>
                 </div>
                 <div class="ctnVs"><h2>X</h2></div>
                 <div class="ctnCount ctRight">
-                    <input id="player1" class="form-control" type="text" value="0"/>
+                    <input id="player2" class="form-control" type="text" value="0"/>
                 </div>
             </div>
             <div id="modal" class="ctnModal" style="display: none">
                 <img src="./assets/trophy.png" alt="trophy" />
-                <h3 id="winner" class="mgT">You win</h3>
+                <h3 id="winner" class="mgT uppercase">You win</h3>
+                <p id="message" class="mgT"></p>
                 <button id="bt_play" class="btn btn-main mgT">Play Again</button>
+            </div>
+            <div>
+                <h3>How to play</h3>
+                <p><b>Player 1</b> - uses keyboard <b>W</b> to move to up and <b>S</b> to move to down</p>
+                <p><b>Player 2</b> - uses cursorboard <b>UP</b> to move to up and cursor <b>DOWN</b> to move to down</p>
+                <p>Press <b>SPACE</b> to start</p>
             </div>
         </div>
     </body>

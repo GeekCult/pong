@@ -7,7 +7,7 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 body {padding: 0px; margin: 0px; background-color: #597627; background: url(./../assets/bg.jpg) no-repeat; height: 100%; width: 100%;}
 h1, h2, h3, h4, h5, h6 {margin: 10px 0;font-family: inherit;font-weight: bold;text-rendering: optimizelegibility;}
 
-.ctnPong {width:800px; height: 680px; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); position: relative;}
+.ctnPong {width:800px; height: 870px; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); position: relative;}
 #pongCanvas {width:800px; height: 600px;position: relative;border: 3px solid #fff; background-color: transparent; box-shadow: 0 10px 10px rgba(0,0,0,0.5)}
 
 #logo {padding: 0px; margin: 0px; background: url(./../assets/logo.png) no-repeat; height: 81px; width: 185px;}
@@ -25,3 +25,5 @@ h1, h2, h3, h4, h5, h6 {margin: 10px 0;font-family: inherit;font-weight: bold;te
 .mgT2 {margin-top: 30px}
 .btn-main {padding: 10px 20px; background: #ff9900; color:#000; text-align:center; border: none; cursor: pointer}
 .btn-main:hover {background: #ff6000}
+
+.uppercase {text-transform: uppercase}
