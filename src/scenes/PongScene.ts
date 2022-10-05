@@ -13,13 +13,14 @@ export default class PongScene extends Phaser.Scene
 
     preload() : void {
         
+        let path = "https://www.geekcult.com.br/media/user/images/original/";
         //Images buffer
-        this.load.image('background', '../assets/soccer.jpg')
-        this.load.image('border_h', '../assets/bar_h.png')
-        this.load.image('border_v', '../assets/bar_v.png')
-        this.load.image('bar', '../assets/bar.png')
-        this.load.image('shine', '../assets/red.png')
-        this.load.image('ball', '../assets/ball.png')
+        this.load.image('background', path + 'soccer.jpg')
+        this.load.image('border_h', path + 'bar_h.png')
+        this.load.image('border_v', path + 'bar_v.png')
+        this.load.image('bar', path + 'bar.png')
+        this.load.image('shine', path + 'red.png')
+        this.load.image('ball', path + 'ball.png')
         
     }
 
