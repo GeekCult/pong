@@ -1,13 +1,13 @@
 ![phaser3-parceljs-template](https://www.geekcult.com.br/media/user/images/original/soccer-pong.png)
 
-# Pong TypeScript and Phaser Template
+# Pong TypeScript and Phaser Game
 > For people who want to spend time making games instead of configuring build tools.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 # Contribution
 This code uses SuperTommy's (Tommy Leung) version of Hello World Scene as a base.
-See the codebase Git address below
+See the codebase Git in the address below
 https://github.com/ourcade/phaser3-parcel-template
 
 ## Other Notes
