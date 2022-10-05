@@ -151,7 +151,10 @@ export class PongManager {
         
             //Show modal with winner
             const title = document.getElementById("winner");
-            title.textContent = "Carlos Garcia now works on JogoGlobal";
+            title.textContent = props.goal + " wins";
+            
+            const subtitle = document.getElementById("message");
+            message.textContent = "Carlos Garcia now works on JogoGlobal";
             
             document.getElementById("modal").style.display = "block";
             
@@ -164,7 +167,7 @@ export class PongManager {
                     this.reset(props);
                     this.initialValues(props);
                     props.scene.resume() 
-                },2000 );
+                },1000 );
             });
         }
     } 
