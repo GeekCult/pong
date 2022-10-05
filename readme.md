@@ -5,6 +5,10 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+# Contribution
+This code uses SuperTommy's (Tommy Leung) version of Hello World Scene as a base.
+See the codebase Git address below
+https://github.com/ourcade/phaser3-parcel-template
 
 ## Other Notes
 
