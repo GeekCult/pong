@@ -125,10 +125,10 @@ export class PongManager {
 
         try {
         
-            props.sideV = this.getWords(['up', 'down']);
-            props.sideH = this.getWords(['left', 'right']);    
-            props.sideM = this.randomNumber(4, 8);   
-            props.sideN = this.randomNumber(4, 8);     
+            props.sideV = this.getRandomWords(['up', 'down']);
+            props.sideH = this.getRandomWords(['left', 'right']);    
+            props.sideM = this.getRandomNumber(4, 8);   
+            props.sideN = this.getRandomNumber(4, 8);     
             
         } catch (error: any) {
             throw new Error(error);
@@ -137,7 +137,6 @@ export class PongManager {
     
     /* 
      * Check the rules
-     * 
      */
     public rules(props: any){
         
@@ -172,15 +171,17 @@ export class PongManager {
         }
     } 
     
-    public getNr(){
-        return  Math.floor(Math.random() * 5);
-    }
-    
-    public getWords(words){
+    /*
+     * Return a random word
+     */
+    public getRandomWords(words){
         return words[Math.floor(Math.random() * words.length)];
     }
     
-    public randomNumber(min: number, max: number) { // min and max included 
+    /*
+     * Return a random number between 2 params
+     */
+    public getRandomNumber(min: number, max: number) { // min and max included 
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 };
