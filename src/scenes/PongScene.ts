@@ -13,7 +13,7 @@ export default class PongScene extends Phaser.Scene
 
     preload() : void {
         
-        let path = '././';
+        let path = '';
         
         //Images buffer
         this.load.image('background', path + 'assets/soccer.jpg')
