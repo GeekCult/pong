@@ -5,6 +5,10 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+# Demo
+See and play the demo at Vercel
+https://pong-five.vercel.app 
+
 # Contribution
 This code uses SuperTommy's (Tommy Leung) version of Hello World Scene as a base.
 See the codebase Git in the address below
