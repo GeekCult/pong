@@ -153,7 +153,7 @@ export class PongManager {
             title.textContent = props.goal + " wins";
             
             const subtitle = document.getElementById("message");
-            message.textContent = "Carlos Garcia now works on JogoGlobal";
+            message.textContent = "Carlos Garcia now works at JogoGlobal";
             
             document.getElementById("modal").style.display = "block";
             
