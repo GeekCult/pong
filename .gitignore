@@ -5,3 +5,5 @@
 /.DS_Store
 readme.md
 .parcel-cache/
+.parcel-cache
+.parcel-cache/data.mdb
