@@ -1,4 +1,4 @@
-
+import * as C from '../consts/Game'
 
 export class PongManager {
     
@@ -7,14 +7,14 @@ export class PongManager {
      */
     public initialValues(props: any) : void {
         
-        props.player1 = 0;
-        props.player2 = 0;
+        props.player1 = C.SCORE_INITIAL;
+        props.player2 = C.SCORE_INITIAL;
         
-        props.ball.x = 400;
-        props.ball.y = 300;
+        props.ball.x = C.FIELD_CENTER_X;
+        props.ball.y = C.FIELD_CENTER_Y;
         
-        const scoreA = document.getElementById("player2");
-        const scoreB = document.getElementById("player1");
+        const scoreA = document.getElementById(C.PLAYER1);
+        const scoreB = document.getElementById(C.PLAYER2);
         
         scoreA.value = props.player1
         scoreB.value = props.player2
@@ -29,8 +29,8 @@ export class PongManager {
         
         this.randomPosition(props);
         
-        props.ball.x = 400;
-        props.ball.y = 300;
+        props.ball.x = C.FIELD_CENTER_X;
+        props.ball.y = C.FIELD_CENTER_Y;
         
         props.scene.resume();
         
@@ -45,7 +45,7 @@ export class PongManager {
         item.setImmovable(true);
         item.body.allowGravity = false;
         
-        if(props.item == 'ball'){
+        if(props.item == C.BALL){
             item.setCollideWorldBounds(true);
         }
         
@@ -57,9 +57,9 @@ export class PongManager {
      */
     public addParticle(props: any) : void {
         
-        const particles = props.add.particles('shine')
+        const particles = props.add.particles(C.SHINE)
         const emitter = particles.createEmitter({
-            speed: 50,
+            speed: C.SHINE_SPEED,
             scale: { start: 1, end: 0 },
             blendMode: 'ADD'
         })
@@ -72,12 +72,12 @@ export class PongManager {
             props.item1,
             props.item2,
             () => {           
-                if(props.action == 'right'){ props.game.sideH = 'right'; }
-                if(props.action == 'left'){ props.game.sideH = 'left'; }
-                if(props.action == 'down'){ props.game.sideV = 'down'; }
-                if(props.action == 'up'){ props.game.sideV = 'up'; }
+                if(props.action == C.RIGHT){ props.game.sideH = C.RIGHT; }
+                if(props.action == C.LEFT){ props.game.sideH = C.LEFT; }
+                if(props.action == C.DOWN){ props.game.sideV = C.DOWN; }
+                if(props.action == C.UP){ props.game.sideV = C.UP; }
                 //When we have a goal
-                if(props.action == 'player1' || props.action == 'player2'){
+                if(props.action == C.PLAYER1 || props.action == C.PLAYER2){
                     props.game.scene.pause();
                     props.game.goal = props.action; 
                     this.scoreBoard(props.game);
@@ -93,17 +93,17 @@ export class PongManager {
     public scoreBoard(props: any){
         
         const box = document.getElementById(props.goal);
-        let score: number = 0;
+        let score: number = C.SCORE_INITIAL;
             
         try {
 
-            if(props.goal === 'player1'){
-                props.player1 = props.player1 + 1;
+            if(props.goal === C.PLAYER1){
+                props.player1 = props.player1 + C.GOAL;
                 score = props.player1;
             }
 
-            if(props.goal === 'player2'){
-                props.player2 = props.player2 + 1;
+            if(props.goal === C.PLAYER2){
+                props.player2 = props.player2 + C.GOAL;
                 score = props.player2;
             }
             
@@ -125,10 +125,10 @@ export class PongManager {
 
         try {
         
-            props.sideV = this.getRandomWords(['up', 'down']);
-            props.sideH = this.getRandomWords(['left', 'right']);    
-            props.sideM = this.getRandomNumber(4, 8);   
-            props.sideN = this.getRandomNumber(4, 8);     
+            props.sideV = this.getRandomWords([C.UP, C.DOWN]);
+            props.sideH = this.getRandomWords([C.LEFT, C.RIGHT]);    
+            props.sideM = this.getRandomNumber(C.BALL_MOVE_X, C.BALL_MOVE_Y);   
+            props.sideN = this.getRandomNumber(C.BALL_MOVE_X, C.BALL_MOVE_Y);     
             
         } catch (error: any) {
             throw new Error(error);
@@ -140,11 +140,11 @@ export class PongManager {
      */
     public rules(props: any){
         
-        if(props.score < 7){
+        if(props.score < C.SCORE){
             
             setTimeout(() => { 
                 this.reset(props);
-            }, 2000);
+            }, 2000 );
             
         }else{
         
@@ -153,7 +153,7 @@ export class PongManager {
             title.textContent = props.goal + " wins";
             
             const subtitle = document.getElementById("message");
-            message.textContent = "Carlos Garcia now works at JogoGlobal";
+            message.textContent = C.EASTER_EGG;
             
             document.getElementById("modal").style.display = "block";
             
@@ -166,7 +166,7 @@ export class PongManager {
                     this.reset(props);
                     this.initialValues(props);
                     props.scene.resume() 
-                },1000 );
+                }, 1000 );
             });
         }
     } 

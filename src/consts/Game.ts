@@ -15,6 +15,15 @@ const FIELD_HEIGH = 600
 const FIELD_INITIAL = 0
 const FIELD_PLAYER1_X = 30
 const FIELD_PLAYER2_X = 770
+const BALL = 'ball'
+const SHINE = 'shine'
+const SHINE_SPEED = 50
+const SCORE = 7
+const SCORE_INITIAL = 0
+const GOAL = 1
+const BALL_MOVE_X = 4
+const BALL_MOVE_Y = 8
+const EASTER_EGG = "Carlos Garcia now works at JogoGlobal"
 
 export {
     MOVE,
@@ -33,5 +42,14 @@ export {
     FIELD_HEIGH,
     FIELD_INITIAL,
     FIELD_PLAYER1_X,
-    FIELD_PLAYER2_X
+    FIELD_PLAYER2_X,
+    BALL,
+    SHINE,
+    SHINE_SPEED,
+    SCORE,
+    EASTER_EGG,
+    GOAL,
+    SCORE_INITIAL,
+    BALL_MOVE_X,
+    BALL_MOVE_Y
 }
