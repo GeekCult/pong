@@ -4,7 +4,7 @@ import * as C from '../consts/Game'
 
 
 import ball from '../../public/assets/ball.png';
-//import field from '../../public/assets/soccer.jpg';
+import field from '../../public/assets/soccer.jpg';
 import bar from '../../public/assets/bar.png';
 import bar_h from '../../public/assets/bar_h.png';
 import bar_v from '../../public/assets/bar_v.png';
@@ -21,8 +21,9 @@ export default class PongScene extends Phaser.Scene
 
     preload() : void {
         
+
         //Images buffer
-        //this.load.image('background', field)
+        this.load.image('background', field)
         this.load.image('border_h', bar_h)
         this.load.image('border_v', bar_v)
         this.load.image('bar', bar)
@@ -33,7 +34,7 @@ export default class PongScene extends Phaser.Scene
 
     create() : void {
             
-        //let background = this.add.image(400, 300, 'background') as any
+        let background = this.add.image(400, 300, 'background') as any
         
         this.keys = this.input.keyboard.addKeys({
             w: 'W', s: 'S', up: 'UP', down: 'DOWN', space: 'SPACE'
