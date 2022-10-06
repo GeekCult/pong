@@ -13,7 +13,7 @@
         "type": "git",
         "url": "https://github.com/geekcult/pong.git"
     },
-<<<<<<< HEAD
+
     "homepage": "https://github.com/geekcult/pong",
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.29.0",
@@ -22,10 +22,6 @@
         "minimist": ">=1.2.2",
         "parcel-plugin-clean-easy": "^1.0.2",
         "parcel-plugin-static-files-copy": "^2.4.3",
-=======
-    "homepage": "https://github.comgeekcult/pong",
-    "devDependencies": {
->>>>>>> ea9582441f5a4f1627e2e7913bbd7d332672888a
         "@babel/core": "^7.10.5",
         "@babel/plugin-proposal-class-properties": "^7.10.4",
         "babel-eslint": "^10.1.0",
@@ -33,21 +29,12 @@
         "eslint": "^6.8.0",
         "minimist": ">=1.2.2",
         "parcel": "^2.7.0",
-<<<<<<< HEAD
-=======
-        "parcel-plugin-clean-easy": "^1.0.2",
-        "parcel-plugin-static-files-copy": "^2.4.3",
->>>>>>> ea9582441f5a4f1627e2e7913bbd7d332672888a
         "postcss": "^8.4.17",
         "typescript": "^4.8.4"
     },
     "dependencies": {
-<<<<<<< HEAD
         "phaser": "^3.55.2",
         "parcel": "^2.7.0"
-=======
-        "phaser": "^3.55.2"
->>>>>>> ea9582441f5a4f1627e2e7913bbd7d332672888a
     },
     "parcelCleanPaths": [
         "dist"
