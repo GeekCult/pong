@@ -4,14 +4,14 @@
 */
 
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
-body {padding: 0px; margin: 0px; background-color: #597627; background: url(../../public/assets/bg.jpg) no-repeat; height: 100%; width: 100%;}
+body {padding: 0px; margin: 0px; background-color: #597627; background: #ff9900 no-repeat; height: 100%; width: 100%;}
 h1, h2, h3, h4, h5, h6 {margin: 10px 0;font-family: inherit;font-weight: bold;text-rendering: optimizelegibility;}
 
 .ctnPong {width:800px; height: 870px; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); position: relative;}
 #pongCanvas {width:800px; height: 600px;position: relative;border: 3px solid #fff; background-color: transparent; box-shadow: 0 10px 10px rgba(0,0,0,0.5)}
 
 
-#logo {padding: 0px; margin: 0px; background: url(../../public/assets/logo.png) no-repeat; height: 81px; width: 185px;}
+#logo {padding: 0px; margin: 0px; height: 81px; width: 185px;}
 .placar{position:relative; display:flex; margin:0 auto; justify-content: center}
 .ctnCount {background: #333; color: #fff; width: 100px; height: 30px; padding: 10px 20px; position: relative; text-align: center;font-size: 30px;}
 .ctnVs {background: #fff; color: #000; padding: 10px 20px;}
