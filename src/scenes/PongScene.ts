@@ -2,6 +2,13 @@ import Phaser from 'phaser'
 import { pongManager } from "../game/PongManager";
 import * as C from '../consts/Game'
 
+import ball from '../../public/assets/ball.png';
+import field from '../../public/assets/soccer.jpg';
+import bar from '../../public/assets/bar.png';
+import bar_h from '../../public/assets/bar_h.png';
+import bar_v from '../../public/assets/bar_v.png';
+import shine from '../../public/assets/red.png';
+
 export default class PongScene extends Phaser.Scene
 {
     
@@ -13,16 +20,14 @@ export default class PongScene extends Phaser.Scene
 
     preload() : void {
         
-        let path = './';
-        
         //Images buffer
-        this.load.image('background', path + 'assets/soccer.jpg')
-        this.load.image('border_h', path + 'assets/bar_h.png')
-        this.load.image('border_v', path + 'assets/bar_v.png')
-        this.load.image('bar', path + 'assets/bar.png')
-        this.load.image('shine', path + 'assets/red.png')
-        this.load.image('ball', path + 'assets/ball.png')
-        
+        this.load.image('background', field)
+        this.load.image('border_h', bar_h)
+        this.load.image('border_v', bar_v)
+        this.load.image('bar', bar)
+        this.load.image('shine', shine)
+        this.load.image('ball', ball)
+
     }
 
     create() : void {

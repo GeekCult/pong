@@ -15,7 +15,7 @@ const config = {
             gravity: { y: 200 }
         }
     },
-    scene: [PongScene],
+    scene: [PongScene]
         
 }
 
