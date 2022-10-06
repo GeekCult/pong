@@ -15,7 +15,11 @@ const config = {
             gravity: { y: 200 }
         }
     },
+<<<<<<< HEAD
     scene: [PongScene]
+=======
+    scene: [PongScene],
+>>>>>>> ea9582441f5a4f1627e2e7913bbd7d332672888a
         
 }
 

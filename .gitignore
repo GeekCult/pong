@@ -4,6 +4,9 @@
 /package-lock.json
 /.DS_Store
 readme.md
+<<<<<<< HEAD
 .parcel-cache/
 .parcel-cache
 .parcel-cache/data.mdb
+=======
+>>>>>>> ea9582441f5a4f1627e2e7913bbd7d332672888a
