@@ -1,14 +1,7 @@
 import Phaser from 'phaser'
 import { pongManager } from "../game/PongManager";
 import * as C from '../consts/Game'
-
-
-import ball from '../../public/assets/ball.png';
-import field from '../../public/assets/soccer.jpg';
-import bar from '../../public/assets/bar.png';
-import bar_h from '../../public/assets/bar_h.png';
-import bar_v from '../../public/assets/bar_v.png';
-import shine from '../../public/assets/red.png';
+import * as Images from '../resources/Images'
 
 export default class PongScene extends Phaser.Scene
 {
@@ -21,33 +14,32 @@ export default class PongScene extends Phaser.Scene
 
     preload() : void {
         
-
         //Images buffer
-        this.load.image('background', field)
-        this.load.image('border_h', bar_h)
-        this.load.image('border_v', bar_v)
-        this.load.image('bar', bar)
-        this.load.image('shine', shine)
-        this.load.image('ball', ball)
+        this.load.image('background', Images.field)
+        this.load.image('border_h', Images.bar_h)
+        this.load.image('border_v', Images.bar_v)
+        this.load.image('bar', Images.bar)
+        this.load.image('shine', Images.shine)
+        this.load.image('ball', Images.ball)
 
     }
 
     create() : void {
             
-        let background = this.add.image(400, 300, 'background') as any
+        let background = this.add.image(C.FIELD_CENTER_X, C.FIELD_CENTER_Y, 'background') as any
         
         this.keys = this.input.keyboard.addKeys({
             w: 'W', s: 'S', up: 'UP', down: 'DOWN', space: 'SPACE'
         });
         
         //Set Physics to some elements
-        this.stripeUp = pongManager.addPhysics({ game: this, y: 400, x: 0, item: 'border_h' });
-        this.stripeDown = pongManager.addPhysics({ game: this, y: 400, x: 600, item: 'border_h' });
-        this.borderLeft = pongManager.addPhysics({ game: this, y: 0, x: 300, item: 'border_v' });
-        this.borderRight = pongManager.addPhysics({ game: this, y: 800, x: 300, item: 'border_v' }); 
-        this.playerLeft = pongManager.addPhysics({ game: this, y: 30, x: 300, item: 'bar'  });
-        this.playerRight = pongManager.addPhysics({ game: this, y: 770, x: 300, item: 'bar' });
-        this.ball = pongManager.addPhysics({ game: this, y: 400, x: 300, item: 'ball' });
+        this.stripeUp = pongManager.addPhysics({ game: this, y: C.FIELD_CENTER_X, x: C.FIELD_INITIAL, item: 'border_h' });
+        this.stripeDown = pongManager.addPhysics({ game: this, y: C.FIELD_CENTER_X, x: C.FIELD_HEIGH, item: 'border_h' });
+        this.borderLeft = pongManager.addPhysics({ game: this, y: C.FIELD_INITIAL, x: C.FIELD_CENTER_Y, item: 'border_v' });
+        this.borderRight = pongManager.addPhysics({ game: this, y: C.FIELD_WIDTH, x: C.FIELD_CENTER_Y, item: 'border_v' }); 
+        this.playerLeft = pongManager.addPhysics({ game: this, y: C.FIELD_PLAYER1_X, x: C.FIELD_CENTER_Y, item: 'bar'  });
+        this.playerRight = pongManager.addPhysics({ game: this, y: C.FIELD_PLAYER2_X, x: C.FIELD_CENTER_Y, item: 'bar' });
+        this.ball = pongManager.addPhysics({ game: this, y: C.FIELD_CENTER_X, x: C.FIELD_CENTER_Y, item: 'ball' });
         
         //Set particles to ball just for fun
         const setParticles = pongManager.addParticle(this);
